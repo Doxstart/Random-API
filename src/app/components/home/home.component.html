@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="toolbar-container">
+  <span><i>Memes and Fun Gathering</i></span>
+</mat-toolbar>
+
+<mat-card class="m-card" *ngFor="let d of data.memes[name]">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{d.data.memes[1]}}</mat-card-title>
+      <mat-card-subtitle>Extra large</mat-card-subtitle>
+      <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+
+  </mat-card-content>
+</mat-card>

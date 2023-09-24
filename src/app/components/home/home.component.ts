@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IData, IMeme, IMemeInfo } from 'src/app/models/memes';
+import { IMemeInfo } from 'src/app/models/memes';
 import { ConnectionService } from 'src/app/services/connection.service';
 
 @Component({
@@ -14,9 +14,6 @@ export class HomeComponent implements OnInit{
       memes: []
     }
   };
-  data: IData[] = [];
-  meme: IMeme[] = [];
-
 
   constructor(private connServ: ConnectionService){}
 

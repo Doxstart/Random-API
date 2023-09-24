@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

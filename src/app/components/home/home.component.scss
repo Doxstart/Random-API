@@ -3,3 +3,27 @@
   justify-content: center;
   font-size:xx-large;
 }
+
+body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.m-card{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+.meme-img{
+  max-height: 200px;
+  max-width: 250px;
+  object-fit: cover;
+}

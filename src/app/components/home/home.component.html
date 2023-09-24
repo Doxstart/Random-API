@@ -2,18 +2,16 @@
   <span><i>Memes and Fun Gathering</i></span>
 </mat-toolbar>
 
-<mat-card class="m-card" *ngFor="let i of info.data.memes">
-  <mat-card-header>
-    <mat-card-title-group>
-      <mat-card-title>Name: {{i.name}}</mat-card-title>
-      <mat-card-subtitle>Id: {{i.id}}</mat-card-subtitle>
-      <img mat-card-xl-image src={{i.url}}>
-    </mat-card-title-group>
-  </mat-card-header>
-  <mat-card-content>
-    <p>Original Height: {{i.height}}px</p>
-    <p>Original Width: {{i.width}}px</p>
-    <p>Box Count: {{i.box_count}}</p>
-    <p>Captions: {{i.captions}}</p>
-  </mat-card-content>
-</mat-card>
+<body>
+  <mat-grid-list cols="4" *ngFor="let i of info.data.memes">
+    <mat-card class="m-card">
+      <mat-card-header>
+        <img mat-card-image class="meme-img" src={{i.url}}>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-title>{{i.name}}</mat-card-title>
+        <mat-card-subtitle>{{i.id}}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-list>
+</body>

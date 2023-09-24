@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IMemeInfo } from 'src/app/models/memes';
+import { IData, IMeme, IMemeInfo } from 'src/app/models/memes';
 import { ConnectionService } from 'src/app/services/connection.service';
 
 @Component({
@@ -8,13 +8,21 @@ import { ConnectionService } from 'src/app/services/connection.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  data: IMemeInfo[] = [];
+  info: IMemeInfo = {
+    success: false,
+    data: {
+      memes: []
+    }
+  };
+  data: IData[] = [];
+  meme: IMeme[] = [];
+
 
   constructor(private connServ: ConnectionService){}
 
   ngOnInit(): void {
       this.connServ.getData().subscribe({
-        next: (data: IMemeInfo[]) => ((this.data = data), (console.log(data))),
+        next: (info: IMemeInfo) => ((this.info = info), (console.log(info))),
         error: (err: any) => console.log(err),
       });
   }

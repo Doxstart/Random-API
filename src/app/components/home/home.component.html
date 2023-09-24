@@ -2,15 +2,18 @@
   <span><i>Memes and Fun Gathering</i></span>
 </mat-toolbar>
 
-<mat-card class="m-card" *ngFor="let d of data.memes[name]">
+<mat-card class="m-card" *ngFor="let i of info.data.memes">
   <mat-card-header>
     <mat-card-title-group>
-      <mat-card-title>{{d.data.memes[1]}}</mat-card-title>
-      <mat-card-subtitle>Extra large</mat-card-subtitle>
-      <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      <mat-card-title>Name: {{i.name}}</mat-card-title>
+      <mat-card-subtitle>Id: {{i.id}}</mat-card-subtitle>
+      <img mat-card-xl-image src={{i.url}}>
     </mat-card-title-group>
   </mat-card-header>
   <mat-card-content>
-
+    <p>Original Height: {{i.height}}px</p>
+    <p>Original Width: {{i.width}}px</p>
+    <p>Box Count: {{i.box_count}}</p>
+    <p>Captions: {{i.captions}}</p>
   </mat-card-content>
 </mat-card>

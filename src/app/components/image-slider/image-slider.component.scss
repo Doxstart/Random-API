@@ -1,0 +1,22 @@
+.slider-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 2px;
+}
+
+.nav-button{
+  background-color: gray;
+  color: white;
+  margin: 0 10px;
+}
+
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
